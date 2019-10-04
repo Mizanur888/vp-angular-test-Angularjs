@@ -13,9 +13,9 @@ vp-angular-test
 * ng serve --o
 
 ##### Issue from API Call
-* First time it will give error from leaderboard.component.ts line 58, please remove the results from response.results. it will start running
+* First time it will give error from leaderboard.component.ts line 58, please remove the results from response.results. it will start running. 
  for sume reason it does not read results array from api first time.  After it runs propersly
- * put back .results after response EXP: response.results
+ * put back ## .results after response EXP: response.results
 
 ##### ERROR in src/app/components/leaderboard/leaderboard.component.ts(58,32): error TS2339: Property 'results'
 does not exist on type 'Object'.
