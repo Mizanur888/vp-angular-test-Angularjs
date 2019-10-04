@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="title">
+    <h1>Friends</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-3" *ngFor="let item of data">
+      <div class="card mat-shadow mat-hover transition">
+        <img
+          class="card-img-top"
+          src="../../../assets/{{ item.image }}"
+          alt="Card image"
+        />
+        <div class="card-body">
+          <h4 class="card-title">{{ item.name }}</h4>
+
+          <button
+            type="button"
+            class="btn btn-success"
+            [disabled]="item.isDisable"
+            (click)="sendRequest(item)"
+          >
+            {{ item.friendRequest }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-friends-with [friendsWith]="friendsWith"> </app-friends-with>
+</div>

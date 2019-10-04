@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="page-heading">
+    <h2 class="mt-4">VP {{ title }}</h2>
+    <p>{{ subtitle }}</p>
+  </div>
+  <div class="friends-list" style="margin-bottom:10px">
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+      [(ngModel)]="searchTerm"
+    />
+  </div>
+  <ul class="friends-list">
+    <li class="friends-list--header">
+      <span>Friend</span>
+      <span>Steps</span>
+      <span>Rank</span>
+      <span>Images</span>
+    </li>
+    <li *ngFor="let user of this.users; let i = index">
+      <span> {{ user.name.first }} {{ user.name.last }} </span>
+      <span>
+        {{ steps[i] }}
+      </span>
+      <span>
+        {{ rank[i] }}
+      </span>
+
+      <span>
+        <img
+          class="card-img-top"
+          src="{{ user.picture.thumbnail }}"
+          alt="Card image"
+        />
+      </span>
+    </li>
+  </ul>
+</div>
