@@ -14,7 +14,8 @@ vp-angular-test
 
 ##### Issue from API Call
 * First time it will give error from that component just, remove the results from response.results. it will start running
- for sume reason it does not read results array from api, after it runs propersly
+ for sume reason it does not read results array from api first time. once it runs put back the  after it runs propersly
+ * put back .results after response EXP: response.results
 
 ##### ERROR in src/app/components/leaderboard/leaderboard.component.ts(58,32): error TS2339: Property 'results'
 does not exist on type 'Object'.
