@@ -19,8 +19,8 @@
       <span>Rank</span>
       <span>Images</span>
     </li>
-    <li *ngFor="let user of this.users; let i = index">
-      <span> {{ user.name.first }} {{ user.name.last }} </span>
+    <li *ngFor="let user of this.testData; let i = index">
+      <span> {{ user[i].name.first }} {{ user[i].name.last }}</span>
       <span>
         {{ steps[i] }}
       </span>
@@ -31,10 +31,18 @@
       <span>
         <img
           class="card-img-top"
-          src="{{ user.picture.thumbnail }}"
+          src="{{ user[i].picture.thumbnail }}"
           alt="Card image"
         />
       </span>
     </li>
   </ul>
+
+  <!-- <div class="webapicall">
+    <ul>
+      <li *ngFor="let item of testData2; let i = index">
+        <span> {{ item.ID }} {{ item.FName }} {{ item.LName }} </span>
+      </li>
+    </ul>
+  </div> -->
 </div>
