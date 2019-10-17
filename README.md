@@ -34,3 +34,29 @@ does not exist on type 'Object'.
   }
 
 ```
+##### Above Issue has been fixed - below is the fixed code
+
+```
+
+
+  getDatatest() {
+    this.service.sendGetRequest().toPromise().then(promise => {
+      let data: any[] = [];
+      data.push(promise);
+      data.forEach(element => {
+
+        for (var i = 0; i < element.results.length; i++) {
+          this.testData.push(element.results)
+          console.log(element.results[i])
+        }
+      });
+    })
+  }
+
+<!-- show api call data -->
+<li *ngFor="let user of this.testData; let i = index">
+      <span> {{ user[i].name.first }} {{ user[i].name.last }}</span>
+</li>
+
+
+```
